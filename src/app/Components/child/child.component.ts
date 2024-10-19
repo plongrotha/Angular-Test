@@ -13,8 +13,6 @@ export class ChildComponent {
   e: string = '';
   oneway: string = 'this is value';
 
-  title: number = 98;
-
   updateUser(userName: HTMLInputElement) {
     this.userName = userName.value;
     console.log(this.userName);
