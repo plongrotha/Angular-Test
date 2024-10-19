@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Agent } from 'http';
 
 @Component({
   selector: 'footer',
@@ -9,7 +10,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   title: string = 'hello footer';
-
   isdisibled: boolean = false;
   isActive: boolean = false;
   fruitName: string = 'apple';

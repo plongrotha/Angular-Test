@@ -1,22 +1,21 @@
 <div class="container text-center">
   <p>{{ title }}</p>
-<!-- i added here -->
+
   <div class="row">
     <div class="h3 mt-3">this is component in footer</div>
     <div class="col">
-      <div class="d-flex text-center gap-3">
-        <!-- property binding  -->
-        <!-- first btn binding using string interpulation  -->
-        <!-- it mean it converted to string value and show in the browser so it will not working-->
-        <button class="btn btn-success" disabled="{{ isdisibled }}">
-          click here
-        </button>
-        <!-- second btn is using property binding -->
-        <button class="btn btn-danger" [disabled]="isdisibled">
-          click here
-        </button>
-      </div>
+      <!-- property binding  -->
+      <!-- first btn binding using string interpulation  -->
+      <!-- it mean it converted to string value and show in the browser so it will not working-->
+      <button class="btn btn-success" disabled="{{ isdisibled }}">
+        click here
+      </button>
+      <!-- second btn is using property binding -->
     </div>
+    <div class="col">
+      <button class="btn btn-danger" [disabled]="isdisibled">click here</button>
+    </div>
+
     <div class="col">
       <!-- Class binding is variabel dynamically add or remove element  -->
       <!-- when have a lots of class like the example below is not a good pratice -->
@@ -44,6 +43,8 @@
         style binding
       </button>
     </div>
+
+    <div class="col"></div>
   </div>
 </div>
 <!-- between class binding and  style binding -->
