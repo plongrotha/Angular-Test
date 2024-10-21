@@ -1,0 +1,35 @@
+what is angular Directives?
+
+                      -> add additional behaviour to elements
+=> static website     -> make application more dynamic and user-friendly
+                      -> manipulate the DOM
+
+                  ==> Types of Angular Directives <==
+                   
+1. Component Directives
+   - These are the most commonly used directives.
+     A Component directive is essentialty a custom element with its own view
+     and behavior. Every Angular Component is a directive with a template
+2. Structural Directives
+   - These directives alter the layout of the DOM by adding or removing elements.
+      Common examples include ngIf, ngFor, and ngSwitch.
+           * Syntax 
+              + old version
+                 *ngIf, *ngFor, *ngSwitch
+              + new version 
+                  @if, @For, @Switch
+                  - @if is Render element based on a Boolean value
+                  - @For is used to repeat an element for each item in a collection
+                  - @Switch display one of a set of elements based on a matching criterian
+
+3. Attribute Directives
+   - These directives change the appeareance ot behaviorof an element, Component, or another
+      directive. common examples include ngClass, ngStyle.     
+
+
+
+
+
+-part 7 
+ mulit ngIf condition
+ 

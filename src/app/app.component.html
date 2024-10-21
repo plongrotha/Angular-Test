@@ -1,11 +1,12 @@
 <footer></footer>
-
+<app-header></app-header>
+<app-child></app-child>
 <!-- Event binding -->
-<button class="btn" (click)="buttonClick()">click me</button>
 <!-- <input type="text" (keyup)="keyenter($event)" /> -->
 <!-- just Enter key can have event with (keyup.enter) -->
 <!-- <input type="text" (keyup.enter)="keyupFiltering()" /> -->
 <!-- <input type="text" (keyup.enter)="keyupFiltering(user)" #user id="userinput" /> -->
+<button class="btn" (click)="buttonClick()">click me</button>
 
 <div class="container">
   <div class="row">
@@ -35,8 +36,44 @@
 
     <div class="col">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="enter value" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="enter value"
+          [value]="username"
+          #username
+        />
       </div>
     </div>
   </div>
+
+  <!-- <div>
+    <h2 *ngIf="isloggin; else message">{{ testname }}</h2>
+
+    @if(isloggin ){
+    <h2>{{ testname }}</h2>
+    }@else{
+    <h4>this is not logged</h4>
+    } @if(!isloggin){
+    <h4>this is not logged</h4>
+    }
+
+    <ng-template #message>
+      <h3>this is ng template</h3>
+    </ng-template>
+  </div> -->
+
+  <div class="multi-condition">
+    <h4>welcome to Admin</h4>
+    <h4>welcome to Member</h4>
+    <h4>welcome to Guest</h4>
+  </div>
 </div>
+<!-- 
+ngOnchange if not have input and output is not onchange {input and output} 
+input and output when child and parent comunicate together
+
+send date parent to child -> child is listen from parent 
+parent is handle data to child 
+but 
+-->

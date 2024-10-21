@@ -1,17 +1,36 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ChildComponent } from './Components/child/child.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent],
+  imports: [
+    RouterOutlet,
+    FooterComponent,
+    ChildComponent,
+    HeaderComponent,
+    FormsModule,
+    NgIf,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angulartest';
+  title: string = 'angulartest';
   username: string = 'rotha';
+
+  isloggin: boolean = false;
+  testname: string = 'test name';
+
+  isAdmin: boolean = false;
+  isMember: boolean = false;
+  isGuest: boolean = true;
+
   buttonClick() {
     console.log('button clicked');
   }
@@ -23,6 +42,6 @@ export class AppComponent {
     }
   }
   keyupFiltering(user: HTMLInputElement) {
-    console.log(user.value);
+    console.log(user.id);
   }
 }
